@@ -21,10 +21,59 @@ void setup() {
 }
 
 void loop() {
- TurnONColor_CP1(leds1, CP1);
- RunningLed_red(leds1, CP1);
- RunningLed_blue(leds2, CP2);
- CP3RunningCode(leds3, CP3);
+  //Turn ON Everything
+  TurnONWhite(leds1, CP1);
+  TurnONWhite(leds2, CP2);
+  TurnONWhite(leds3, CP3);
+  delay(1500);
+
+  //Focus on the outside triangle perimeter
+  TurnONTriangles(leds3, CP3);
+  delay(25);
+
+  TurnONColor_CP1(leds1, CP1);
+  RunningLed_red(leds1, CP1);
+  RunningLed_blue(leds2, CP2);
+  CP3RunningCode(leds3, CP3);
+  delay(25);
+
+  TurnONColor_CP1(leds3, CP3);
+  RunningLed_blue(leds2, CP2);
+  RunningLed_red(leds3, CP3);
+  delay(1500);
+
+  //Turn ON Everything
+  TurnBlue(leds3, CP3);
+  delay(500);
+  RunningLed_blue(leds3, CP3);
+  TurnONWhite(leds3, CP3);
+  delay(50);
+
+  TurnRed(leds2, CP2);
+  delay(500);
+  RunningLed_red(leds2, CP2);
+  TurnONWhite(leds2, CP2);
+  delay(10);
+
+  for (int i = 0; i < 3; i++){
+    TurnONColor_CP1(leds1, CP1);
+    delay(25);
+    TurnONColor_CP1(leds2, CP2);
+    delay(25);
+    TurnONColor_CP1(leds3, CP3);
+    delay(25);
+  }
+  
+  TurnONWhite(leds1, CP1);
+  TurnONWhite(leds2, CP2);
+  TurnONWhite(leds3, CP3);
+  delay(3000);
+
+  //Turn off everything for mirror effect
+  TurnOFF(leds1, CP1);
+  TurnOFF(leds2, CP2);
+  TurnOFF(leds3, CP3);
+  delay(15000);
 }
 
 /***************************

@@ -31,3 +31,35 @@ void TurnONColor_CP1(CRGB* ledArray, int CP) {
     delay(100);
   }
 }
+
+void TurnONWhite(CRGB* ledArray, int CP){
+  for (int i = 0; i < CP; i++) {
+    ledArray[i] = CRGB::White;
+  }
+  FastLED.show();
+  delay(25);
+}
+
+void TurnBlue(CRGB* ledArray, int CP){
+  for (int i = 0; i < CP; i++) {
+    ledArray[i] = CRGB::Blue;
+  }
+  FastLED.show();
+  delay(25);
+}
+
+void TurnRed(CRGB* ledArray, int CP){
+  for (int i = 0; i < CP; i++) {
+    ledArray[i] = CRGB::Red;
+  }
+  FastLED.show();
+  delay(25);
+}
+
+void TurnOFF(CRGB* ledArray, int CP){
+  for (int i = 0; i < CP; i++) {
+    ledArray[i] = CRGB::Black;
+  }
+  FastLED.show();
+  delay(25);
+}
