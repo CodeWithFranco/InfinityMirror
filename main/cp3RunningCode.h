@@ -47,7 +47,7 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(150);
+      delay(10);
     }
   }
   for (int i = 5; i <= 14; i++){
@@ -64,7 +64,7 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(150);
+      delay(10);
     }
   }
   for (int i = 21; i <= 30; i++){
@@ -81,7 +81,7 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(150);
+      delay(10);
     }
   }
   for (int i = 38; i <= 46; i++){
@@ -98,7 +98,7 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(150);
+      delay(10);
     }
   }  
   for (int i = 55; i <= 63; i++){

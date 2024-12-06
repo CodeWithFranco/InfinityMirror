@@ -37,6 +37,22 @@ void loop() {
   CP3RunningCode(leds3, CP3);
   delay(25);
 
+  for (int i = 0; i < 3; i++){
+    TurnONWhite(leds1, CP1);
+    delay(50);
+    TurnRed(leds1, CP1);
+  } 
+  for (int i = 0; i < 3; i++){
+    TurnONWhite(leds2, CP2);
+    delay(50);
+    TurnRed(leds2, CP2);
+  }
+  for(int i = 0; i < 3; i++){
+    TurnONWhite(leds3, CP3);
+    delay(50);
+    TurnRed(leds3, CP3);
+  }
+
   TurnONColor_CP1(leds3, CP3);
   RunningLed_blue(leds2, CP2);
   RunningLed_red(leds3, CP3);
@@ -55,25 +71,52 @@ void loop() {
   TurnONWhite(leds2, CP2);
   delay(10);
 
+  //Turn off everything for mirror effect
+  TurnOFF(leds1, CP1);
+  TurnOFF(leds2, CP2);
+  TurnOFF(leds3, CP3);
+  delay(500);
+
+  //Turn ON Everything
+  TurnBlue(leds1, CP1);
+  TurnBlue(leds2, CP2);
+  TurnBlue(leds3, CP3);
+  delay(500);
+
   for (int i = 0; i < 3; i++){
     TurnONColor_CP1(leds1, CP1);
     delay(25);
+    RunningLed_blue(leds3, CP3);
+    delay(10);
     TurnONColor_CP1(leds2, CP2);
     delay(25);
+    RunningLed_red(leds1, CP1);
+    delay(10);
     TurnONColor_CP1(leds3, CP3);
     delay(25);
   }
   
-  TurnONWhite(leds1, CP1);
-  TurnONWhite(leds2, CP2);
-  TurnONWhite(leds3, CP3);
-  delay(3000);
+  for (int i = 0; i < 3; i++){
+    TurnONWhite(leds1, CP1);
+    delay(50);
+    TurnRed(leds1, CP1);
+  } 
+  for (int i = 0; i < 3; i++){
+    TurnONWhite(leds2, CP2);
+    delay(50);
+    TurnRed(leds2, CP2);
+  }
+  for(int i = 0; i < 3; i++){
+    TurnONWhite(leds3, CP3);
+    delay(50);
+    TurnRed(leds3, CP3);
+  }
 
   //Turn off everything for mirror effect
   TurnOFF(leds1, CP1);
   TurnOFF(leds2, CP2);
   TurnOFF(leds3, CP3);
-  delay(15000);
+  delay(20000);
 }
 
 /***************************

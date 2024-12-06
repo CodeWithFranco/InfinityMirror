@@ -20,7 +20,7 @@ void TurnONColor_CP1(CRGB* ledArray, int CP) {
     ledArray[i] = CRGB::Blue;
   }
   FastLED.show();
-  delay(1000);
+  delay(250);
 
   for (int maxBrightness = 255; maxBrightness >= 0; maxBrightness -= 5) { // Corrected decrement
     for (int i = 0; i < CP; i++) {
@@ -30,6 +30,12 @@ void TurnONColor_CP1(CRGB* ledArray, int CP) {
     FastLED.show();
     delay(100);
   }
+
+  for (int i = 0; i < CP; i++) {
+    ledArray[i] = CRGB::Red;
+  }
+  FastLED.show();
+  delay(250);
 }
 
 void TurnONWhite(CRGB* ledArray, int CP){
