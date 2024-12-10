@@ -10,7 +10,7 @@ void RunningLed_red(CRGB* ledArray, int CP){
     if (a + 1 < CP){
       ledArray[a+1] = CRGB::White;
       FastLED.show();
-      delay(50);
+      delay(25);
       ledArray[a+1] = CRGB::Red;
     }
   }
@@ -26,7 +26,7 @@ void RunningLed_blue(CRGB* ledArray, int CP){
     ledArray[a] = CRGB::White;
     ledArray[a - 1] = CRGB::White;
     FastLED.show();
-    delay(50);
+    delay(25);
     ledArray[a] = CRGB::Blue;
     ledArray[a - 1] = CRGB::Blue;
   }

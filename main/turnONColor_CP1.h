@@ -5,24 +5,24 @@ void TurnONColor_CP1(CRGB* ledArray, int CP) {
     ledArray[i] = CRGB::Red;
   }
   FastLED.show();
-  delay(1000);
+  delay(150);
 
-  for (int maxBrightness = 255; maxBrightness >= 0; maxBrightness -= 5) { // Corrected decrement
+  for (int maxBrightness = 255; maxBrightness >= 0; maxBrightness -= 15) { // Corrected decrement
     for (int i = 0; i < CP; i++) {
       ledArray[i] = CRGB::Red;
       ledArray[i].fadeLightBy(255 - maxBrightness);
     }
     FastLED.show();
-    delay(100);
+    delay(200);
   }
 
   for (int i = 0; i < CP; i++) {
     ledArray[i] = CRGB::Blue;
   }
   FastLED.show();
-  delay(250);
+  delay(200);
 
-  for (int maxBrightness = 255; maxBrightness >= 0; maxBrightness -= 5) { // Corrected decrement
+  for (int maxBrightness = 255; maxBrightness >= 0; maxBrightness -= 15) { // Corrected decrement
     for (int i = 0; i < CP; i++) {
       ledArray[i] = CRGB::Blue;
       ledArray[i].fadeLightBy(255 - maxBrightness);
@@ -35,7 +35,7 @@ void TurnONColor_CP1(CRGB* ledArray, int CP) {
     ledArray[i] = CRGB::Red;
   }
   FastLED.show();
-  delay(250);
+  delay(100);
 }
 
 void TurnONWhite(CRGB* ledArray, int CP){
@@ -57,6 +57,14 @@ void TurnBlue(CRGB* ledArray, int CP){
 void TurnRed(CRGB* ledArray, int CP){
   for (int i = 0; i < CP; i++) {
     ledArray[i] = CRGB::Red;
+  }
+  FastLED.show();
+  delay(25);
+}
+
+void TurnGreen(CRGB* ledArray, int CP){
+  for (int i = 0; i < CP; i++) {
+    ledArray[i] = CRGB::Green;
   }
   FastLED.show();
   delay(25);

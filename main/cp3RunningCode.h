@@ -5,7 +5,7 @@ void CP3RunningCode(CRGB* ledArray, int CP){
   ledArray[i] = CRGB::Red;
   }
   FastLED.show();
-  delay(1000);
+  delay(500);
   //Transition1
   for (int i = 5; i <= 14; i++){
     ledArray[i] = CRGB::White;
@@ -47,14 +47,14 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(10);
+      delay(25);
     }
   }
   for (int i = 5; i <= 14; i++){
     ledArray[i] = CRGB::Red;
   }
   FastLED.show();
-  delay(250);
+  delay(100);
 
     //Transition2
   for(int a = 0; a < 3; a++){
@@ -64,14 +64,14 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(10);
+      delay(25);
     }
   }
   for (int i = 21; i <= 30; i++){
     ledArray[i] = CRGB::Red;
   }
   FastLED.show();
-  delay(250);
+  delay(100);
 
     //Transition3
   for(int a = 0; a < 3; a++){
@@ -81,14 +81,14 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(10);
+      delay(25);
     }
   }
   for (int i = 38; i <= 46; i++){
     ledArray[i] = CRGB::Red;
   }
   FastLED.show();
-  delay(250);
+  delay(100);
 
     //Transition4
   for(int a = 0; a < 3; a++){
@@ -98,13 +98,13 @@ void TurnONTriangles(CRGB* ledArray, int CP){
         ledArray[i].fadeLightBy(255 - maxBrightness);
       }
       FastLED.show();
-      delay(10);
+      delay(25);
     }
   }  
   for (int i = 55; i <= 63; i++){
     ledArray[i] = CRGB::Red;
   }
   FastLED.show();
-  delay(250);
+  delay(100);
 }
   

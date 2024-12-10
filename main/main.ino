@@ -25,7 +25,29 @@ void loop() {
   TurnONWhite(leds1, CP1);
   TurnONWhite(leds2, CP2);
   TurnONWhite(leds3, CP3);
-  delay(1500);
+  delay(150);
+  for (int i = 0; i < 6; i++){
+    TurnGreen(leds3, CP3);
+    delay(5);
+    TurnOFF(leds3, CP3);
+    delay(5);
+    TurnGreen(leds3, CP3);
+    delay(5);
+    TurnRed(leds1, CP1);
+    delay(5);
+    TurnOFF(leds1, CP1);
+    delay(5);
+    TurnRed(leds1, CP1);
+    delay(5);
+    TurnBlue(leds2, CP2);
+    delay(5);
+    TurnOFF(leds2, CP2);
+    delay(5);
+    TurnBlue(leds2, CP2);
+  }
+  TurnGreen(leds3, CP3);
+  TurnRed(leds1, CP1);
+  TurnBlue(leds2, CP2);
 
   //Focus on the outside triangle perimeter
   TurnONTriangles(leds3, CP3);
@@ -37,36 +59,36 @@ void loop() {
   CP3RunningCode(leds3, CP3);
   delay(25);
 
-  for (int i = 0; i < 3; i++){
+  for (int i = 0; i < 6; i++){
     TurnONWhite(leds1, CP1);
-    delay(50);
+    delay(75);
     TurnRed(leds1, CP1);
   } 
   for (int i = 0; i < 3; i++){
     TurnONWhite(leds2, CP2);
-    delay(50);
+    delay(75);
     TurnRed(leds2, CP2);
   }
   for(int i = 0; i < 3; i++){
     TurnONWhite(leds3, CP3);
-    delay(50);
+    delay(75);
     TurnRed(leds3, CP3);
   }
 
   TurnONColor_CP1(leds3, CP3);
   RunningLed_blue(leds2, CP2);
   RunningLed_red(leds3, CP3);
-  delay(1500);
+  delay(500);
 
   //Turn ON Everything
   TurnBlue(leds3, CP3);
-  delay(500);
+  delay(250);
   RunningLed_blue(leds3, CP3);
   TurnONWhite(leds3, CP3);
   delay(50);
 
   TurnRed(leds2, CP2);
-  delay(500);
+  delay(250);
   RunningLed_red(leds2, CP2);
   TurnONWhite(leds2, CP2);
   delay(10);
@@ -75,7 +97,7 @@ void loop() {
   TurnOFF(leds1, CP1);
   TurnOFF(leds2, CP2);
   TurnOFF(leds3, CP3);
-  delay(500);
+  delay(1000);
 
   //Turn ON Everything
   TurnBlue(leds1, CP1);
@@ -116,7 +138,7 @@ void loop() {
   TurnOFF(leds1, CP1);
   TurnOFF(leds2, CP2);
   TurnOFF(leds3, CP3);
-  delay(20000);
+  delay(8000);
 }
 
 /***************************
