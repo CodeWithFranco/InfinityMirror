@@ -1,4 +1,4 @@
-I joined DIY project in my company. The theme was to create a lighting project that can sit on top of the table. These are my materials:
+I joined DIY project contest in my company. The theme was to create a lighting project that can sit on top of the table. These are my materials:
 
 1. Arduino Nano Every x 1
    
